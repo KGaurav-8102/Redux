@@ -1,7 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 import reducer from './reducer';
+import logger from './middleware/logger';
 
 
 export default function() {
-    return configureStore({reducer});
+    return configureStore({
+        reducer,
+        middleware : [logger({destination: "Console"})]
+    });
 }
