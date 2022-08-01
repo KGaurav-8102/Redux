@@ -24,6 +24,12 @@ store.dispatch((dispatch, getState) => {
   console.log(getState())
 });
 
+store.dispatch({
+  type: "error",
+  payload: {message: "An error Occured"}
+})
+
+
 const bugs = getBugsByUser(2) (store.getState());
 console.log(bugs);
 
