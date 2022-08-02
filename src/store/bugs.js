@@ -1,5 +1,6 @@
 import {createSlice } from '@reduxjs/toolkit';
 import { createSelector } from 'reselect';
+import axios from 'axios';
 import { apiCallBegan } from './api';
 import moment from 'moment';
 
@@ -69,12 +70,21 @@ export const loadBugs = () => (dispatch, getState) => {
     )
 };
 
-export const addBug = bug => apiCallBegan({
+export const addBug = async bug => {
+    try {
+        const response = await axios.post(url, bug);
+        dispatch(bugAdded(bug));
+    } catch (error) {
+        dispatch({type: error})
+    }
+}
+
+/*  export const addBug = bug => apiCallBegan({
     url,
     method: "post",
     data: bug,
     onSuccess: bugAdded.type
-})
+}) */
 
 
 export const resolveBug = id => apiCallBegan({
@@ -106,7 +116,7 @@ export const assignBugToUser = (bugId, userId) => apiCallBegan({
 export const getUnresolvedBugs = createSelector(
     state => state.entities.bugs,
     state => state.entities.projects,
-    (bugs, projects) => bugs.filter(bug => !bug.resolved)
+    (bugs, projects) => bugs.list.filter(bug => !bug.resolved)
 )
 
 export const getBugsByUser = userId => createSelector(

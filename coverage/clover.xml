@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1659434993478" clover="3.2.0">
+  <project timestamp="1659434993479" name="All files">
+    <metrics statements="36" coveredstatements="15" conditionals="2" coveredconditionals="0" methods="21" coveredmethods="4" elements="59" coveredelements="19" complexity="0" loc="36" ncloc="36" packages="1" files="2" classes="2"/>
+    <file name="api.js" path="F:\redux-starter\src\store\api.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+    </file>
+    <file name="bugs.js" path="F:\redux-starter\src\store\bugs.js">
+      <metrics statements="33" coveredstatements="12" conditionals="2" coveredconditionals="0" methods="21" coveredmethods="4"/>
+      <line num="8" count="1" type="stmt"/>
+      <line num="21" count="0" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+      <line num="26" count="0" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="31" count="0" type="stmt"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="41" count="0" type="stmt"/>
+      <line num="44" count="0" type="stmt"/>
+      <line num="45" count="0" type="stmt"/>
+      <line num="50" count="1" type="stmt"/>
+      <line num="55" count="1" type="stmt"/>
+      <line num="57" count="1" type="stmt"/>
+      <line num="58" count="0" type="stmt"/>
+      <line num="60" count="0" type="stmt"/>
+      <line num="61" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="63" count="0" type="stmt"/>
+      <line num="73" count="1" type="stmt"/>
+      <line num="74" count="0" type="stmt"/>
+      <line num="75" count="0" type="stmt"/>
+      <line num="76" count="0" type="stmt"/>
+      <line num="78" count="0" type="stmt"/>
+      <line num="90" count="1" type="stmt"/>
+      <line num="97" count="1" type="stmt"/>
+      <line num="116" count="1" type="stmt"/>
+      <line num="117" count="1" type="stmt"/>
+      <line num="118" count="1" type="stmt"/>
+      <line num="119" count="3" type="stmt"/>
+      <line num="122" count="1" type="stmt"/>
+      <line num="123" count="0" type="stmt"/>
+      <line num="124" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
