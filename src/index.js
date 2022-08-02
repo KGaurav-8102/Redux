@@ -3,7 +3,7 @@ import {bugAdded, bugResolved,bugAssignedToUser, getUnresolvedBugs, getBugsByUse
 import { projectAdded } from "./store/projects";
 import { userAdded } from "./store/users";
 //import * as actions from "./store/api";
-import { loadBugs } from "./store/bugs";
+import { loadBugs, addBug, resolveBug, assignBugToUser } from "./store/bugs";
 
 const store = configureStore();
 
@@ -33,9 +33,11 @@ store.dispatch({
 
 //Uilayer
 
+//store.dispatch(addBug({ description: "a"}));
+
 store.dispatch(loadBugs());
 
-setTimeout(() => store.dispatch(loadBugs()), 2000);
+setTimeout(() => store.dispatch(assignBugToUser(1, 4)), 2000);
 
 
 //store.dispatch(actions.apiCallBegan());
