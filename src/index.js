@@ -2,7 +2,8 @@ import configureStore from "./store/configureStore";
 import {bugAdded, bugResolved,bugAssignedToUser, getUnresolvedBugs, getBugsByUser } from './store/bugs';
 import { projectAdded } from "./store/projects";
 import { userAdded } from "./store/users";
-import * as actions from "./store/api";
+//import * as actions from "./store/api";
+import { loadBugs } from "./store/bugs";
 
 const store = configureStore();
 
@@ -30,10 +31,14 @@ store.dispatch({
   payload: {message: "An error Occured"}
 })
 
-store.dispatch(actions.apiCallBegan({
-  url: '/bugs',
-  onSuccess: 'bugsReceived',
-}));
+//Uilayer
+
+store.dispatch(loadBugs());
+
+setTimeout(() => store.dispatch(loadBugs()), 2000);
+
+
+//store.dispatch(actions.apiCallBegan());
 
 /* store.dispatch({
   type: 'apiCallBegan',
